@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 
-set(CMAKE_C_FLAGS " -Wall")
+set(CMAKE_CXX_FLAGS " -Wall")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # add_definitions("-DMACRO1=bar") # プリプロセッサ定義を追加
 
