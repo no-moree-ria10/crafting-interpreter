@@ -7,6 +7,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 file(GLOB_RECURSE SRC_FILES "./src/*.cpp") # 再帰的に.cppファイルを検索する
 #file(GLOB_RECURSE HEADER_FILES "./src/*.h") # 再帰的に.cppファイルを検索する
-add_executable( main.out ${SRC_FILES})
+add_executable( clox ${SRC_FILES})
 # target_link_libraries(  pthread ) # リンクするライブラリを追加
 
