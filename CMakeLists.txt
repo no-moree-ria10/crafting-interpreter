@@ -6,6 +6,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # add_definitions("-DMACRO1=bar") # プリプロセッサ定義を追加
 
 file(GLOB_RECURSE SRC_FILES "./src/*.cpp") # 再帰的に.cppファイルを検索する
+#file(GLOB_RECURSE HEADER_FILES "./src/*.h") # 再帰的に.cppファイルを検索する
 add_executable( main.out ${SRC_FILES})
 # target_link_libraries(  pthread ) # リンクするライブラリを追加
 
