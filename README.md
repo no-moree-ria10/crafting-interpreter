@@ -1,2 +1,3 @@
 # crafting-interpreter
-Learning craftingInterpreter 
+Learning craftingInterpreter.clox chapter
+from http://craftinginterpreters.com/
