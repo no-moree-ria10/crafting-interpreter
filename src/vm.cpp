@@ -34,7 +34,7 @@ static InterpretResult run(){
 #define BINARY_OP(op) \
     do { \
     double b = pop(); \
-    double a = pop(); \ 
+    double a = pop(); \
     push(a op b); \
     } while(false)
           
@@ -78,6 +78,20 @@ static InterpretResult run(){
 }
     
 InterpretResult interpret(const char* source){
-    compile(source);
-    return INTERPRET_OK;
+
+    Chunk chunk;
+    initChunk(&chunk);
+
+    if(!compile(source, &chunk)){ 
+        freeChunk(&chunk);
+        return INTERPRET_COMILE_ERROR;
+    }
+    
+    vm.chunk = &chunk;
+    vm.ip    = vm.chunk -> code;
+
+    InterpretResult result = run();
+    freeChunk(&chunk);
+    
+    return result;
 }
